@@ -150,7 +150,7 @@ namespace randr_util {
 
         // clang-format off
         if (monitor->x >= (*m)->x && monitor->x + monitor->w <= (*m)->x + (*m)->w &&
-            monitor->y >= (*m)->y && monitor->y + monitor->h <= (*m)->y + (*m)->h) {
+            monitor->y >= (*m)->y && monitor->y + monitor->h <= (*m)->y + (*m)->h && monitor->name == (*m)->name) {
           // Reset width so that the output gets
           // removed in the base loop
           monitor->w = 0;
